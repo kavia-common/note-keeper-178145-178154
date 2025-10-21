@@ -6,7 +6,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /:
+ * /health:
  *   get:
  *     summary: Health endpoint
  *     responses:
@@ -30,6 +30,6 @@ const router = express.Router();
  *                   type: string
  *                   example: development
  */
-router.get('/', healthController.check.bind(healthController));
+router.get('/health', healthController.check.bind(healthController));
 
 module.exports = router;
